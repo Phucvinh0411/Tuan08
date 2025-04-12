@@ -1,0 +1,47 @@
+{
+    "Details": [
+        {
+          "customer_name": "Elizabeth Lee",
+          "company": "AvatarSystems",
+          "order_value": 359,
+          "order_date": "2023-07-10",
+          "status": "New"
+        },
+        {
+          "customer_name": "Carlos Garcia",
+          "company": "SmoozeShift",
+          "order_value": 747,
+          "order_date": "2023-07-24",
+          "status": "New"
+        },
+        {
+          "customer_name": "Elizabeth Bailey",
+          "company": "Prime Time Telecom",
+          "order_value": 564,
+          "order_date": "2023-08-08",
+          "status": "In-progress"
+        },
+        {
+          "customer_name": "Ryan Brown",
+          "company": "OmniTech Corporation",
+          "order_value": 541,
+          "order_date": "2023-08-31",
+          "status": "In-progress"
+        },
+        {
+          "customer_name": "Ryan Young",
+          "company": "DataStream Inc.",
+          "order_value": 769,
+          "order_date": "2023-05-01",
+          "status": "Completed"
+        },
+        {
+          "customer_name": "Hailey Adams",
+          "company": "FlowRush",
+          "order_value": 922,
+          "order_date": "2023-06-10",
+          "status": "Completed"
+        }
+      ]
+      
+}
