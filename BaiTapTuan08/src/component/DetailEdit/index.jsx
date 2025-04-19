@@ -15,6 +15,7 @@ const DetailEdit = (props) => {
     setShowModal(false);
   };
 
+//thực hỉnh chỉnh sửa api trên database
   const pushAPI = async (objSubmit) => {
     const response = await fetch("http://localhost:8000/Details/" + item.id, {
       method: "PATCH",
@@ -24,31 +25,32 @@ const DetailEdit = (props) => {
       body: JSON.stringify(objSubmit),
     });
     const result = response.json();
-    if (result) {
-      onReload();
-      closeModal();
-      Swal.fire({
-        title: "Đã cập nhật thành công!",
-        icon: "success",
-        draggable: true,
-      });
-    }
-  };
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(e);
-    const objSubmit = {
-      customer_name: e.target.elements.customer_name.value,
-      company: e.target.elements.company.value,
-      order_value: e.target.elements.order_value.value,
-      order_date: e.target.elements.order_date.value,
-      status: e.target.elements.status.value,
-      avatar: e.target.elements.avatar.value,
-    };
+    if ( result) {
+      Swal.fire({ 
+        title: "Đã cập nhật thành công!", 
+        icon: "success", 
+        draggable: true, 
+      }); 
+      onReload(); 
+      closeModal(); 
+    } 
+  }; 
 
-    pushAPI(objSubmit);
-  };
 
+    pushAPI(objSubmit); 
+  }; 
+
+  const handleSubmit = (e) => { 
+    e.preventDefault(); 
+    console.log(e); 
+    const objSubmit = { 
+      customer_name: e.target.elements.customer_name.value, 
+      company: e.target.elements.company.value, 
+      order_value: e.target.elements.order_value.value, 
+      order_date: e.target.elements.order_date.value, 
+      status: e.target.elements.status.value, 
+      avatar: e.target.elements.avatar.value, 
+    }; 
   //sự kiện edit
   const handleClick = () => {
     console.log(item);
