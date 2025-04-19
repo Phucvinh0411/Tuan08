@@ -49,9 +49,9 @@
       "id": 6,
       "customer_name": "Hailey Adams",
       "company": "FlowRush",
-      "order_value": 922,
+      "order_value": "922",
       "order_date": "2023-06-10",
-      "status": "Completed",
+      "status": "New",
       "avatar": "/user.png"
     }
   ]

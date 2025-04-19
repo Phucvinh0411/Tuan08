@@ -36,21 +36,24 @@ const DetailEdit = (props) => {
     } 
   }; 
 
+    const handleSubmit = (e) => { 
+      e.preventDefault(); 
+      console.log(e); 
+      const objSubmit = { 
+        customer_name: e.target.elements.customer_name.value, 
+        company: e.target.elements.company.value, 
+        order_value: e.target.elements.order_value.value, 
+        order_date: e.target.elements.order_date.value, 
+        status: e.target.elements.status.value, 
+        avatar: e.target.elements.avatar.value, 
+      }; 
+
+
 
     pushAPI(objSubmit); 
   }; 
 
-  const handleSubmit = (e) => { 
-    e.preventDefault(); 
-    console.log(e); 
-    const objSubmit = { 
-      customer_name: e.target.elements.customer_name.value, 
-      company: e.target.elements.company.value, 
-      order_value: e.target.elements.order_value.value, 
-      order_date: e.target.elements.order_date.value, 
-      status: e.target.elements.status.value, 
-      avatar: e.target.elements.avatar.value, 
-    }; 
+
   //sự kiện edit
   const handleClick = () => {
     console.log(item);
