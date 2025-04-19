@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { MdCheckBoxOutlineBlank } from "react-icons/md";
 import DetailEdit from "../DetailEdit";
 import "./style.css"
+import AddUser from "../AddUser";
 
 const DetailReportList = () => {
   const [data, setData] = useState([]);
@@ -26,7 +27,8 @@ const DetailReportList = () => {
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-bold text-black">Detailed report</h2>
           <div className="flex gap-2">
-            <button className="text-pink-300 border-2 p-2 rounded">Import</button>
+            <div className="text-pink-300 border-2 p-2 rounded"><AddUser onReload= {handleReload}/></div>
+            {/* <button className="text-pink-300 border-2 p-2 rounded">Import</button> */}
             <button className="text-pink-300 border-2 p-2 rounded">Export</button>
           </div>
         </div>
